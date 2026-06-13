@@ -15,8 +15,8 @@ Een transcriptomics analyse gedaan mbv R om te kijken welke genen meer of minder
 
 # Introductie
 Reumatoïde artritis (RA) is een chronische inflammatoire auto-immuunziekte die wordt gekenmerkt door aanhoudende ontsteking van het gewrichtsslijmvlies, erosie van botten en kraakbeen, wat leidt tot gewrichtsdestructie. Het is een multifactoriële ziekte waarbij genetische en omgevingsfactoren een belangrijke rol spelen in zowel de gevoeligheid als het ontstaan van deze aandoening. De verschillen in ziekteverloop bij RA-patiënten zijn ook te wijten aan genetische en moleculaire kenmerken, zoals de patronen van ontstekingsmoleculen die aanwezig zijn in het ontstoken weefsel van de aangetaste gewrichten.(bron)
-Een manier om de invloed van deze genetische en moleculaire kenmerken beter te begrijpen is transcriptomics. Deze analyse maakt het mogelijk om genexpressiepatronen in weefsels te bestuderen en zo inzicht te krijgen in de moleculaire processen die betrokken zijn bij ziekteontwikkeling. 
-In deze studie werd RNA-sequencingdata van synoviumbiopten van patiënten met RA en gezonde controles geanalyseerd in R (bron). Het doel was om verschillen in genexpressie tussen beide groepen te identificeren en betrokken biologische pathways te onderzoeken.
+
+Een manier om de invloed van deze genetische en moleculaire kenmerken beter te begrijpen is transcriptomics. Deze analyse maakt het mogelijk om genexpressiepatronen in weefsels te bestuderen en zo inzicht te krijgen in de moleculaire processen die betrokken zijn bij ziekteontwikkeling. In deze studie werd RNA-sequencingdata van synoviumbiopten van patiënten met RA en gezonde controles geanalyseerd in R (bron). Het doel was om verschillen in genexpressie tussen beide groepen te identificeren en betrokken biologische pathways te onderzoeken.
 
 
 # Methoden
