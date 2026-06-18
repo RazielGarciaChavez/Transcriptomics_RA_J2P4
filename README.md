@@ -129,7 +129,7 @@ Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 4. </b> T-cel pathway beschrijving moet nog!!! </em>
+  <em><b>Figuur 4. Visualisatie van de T-cell receptor signaling pathway  op basis van differentiële genexpressie tussen RA patiënten en gezonde controles. </b> De pathway (hsa04660) werd gevisualiseerd met het R-pakket Pathview op basis van GO-analyse resultaten. Rood gekleurde genen zijn opgereguleerd in RA, terwijl groen gekleurde genen neerwaarts gereguleerd zijn. Binnen deze pathway werden meerdere genen betrokken bij T-celactivatie en immuunsignalering differentieel geëxpresseerd, waaronder CD3D, CD3E, CD45, ZAP70, GADS, ITK en PI3K. Daarnaast werden veranderingen waargenomen in componenten van de MAPK- en NF-κB-signaalroutes. Deze resultaten wijzen op een veranderde T-celgemedieerde immuunrespons. </em>
 </p>
 
 <br>
@@ -139,7 +139,7 @@ Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 5. </b> b-cel pathway beschrijving moet nog!!! </em>
+  <em><b>Figuur 5. Visualisatie van de B-cell receptor signaling pathway op basis van differentiële genexpressie tussen RA patiënten en gezonde controles. </b> De pathway (hsa04662) werd gevisualiseerd met het R-pakket Pathview op basis van KEGG-annotaties. Rode genen vertegenwoordigen verhoogde expressie in RA en groene genen verlaagde expressie. Verschillende genen betrokken bij B-celactivatie en antigeenherkenning waren differentieel geëxpresseerd, waaronder CD72, CD22, BANK1, BLNK, PLCγ2 en CD19. Tevens werden veranderingen waargenomen in de PI3K-AKT-, MAPK- en NF-κB-signaalroutes. De verrijking van deze pathway ondersteunt de rol van B-cellen en humorale immuniteit in de pathogenese van reumatoïde artritis. </em>
 </p>
 
 <br>
@@ -149,7 +149,7 @@ Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 6. </b> RA pathway beschrijving moet nog!!! </em>
+  <em><b>Figuur 6. Visualisatie van de bij Rheumatoid Arthritis betrokken pathways. </b> De pathway (hsa05323) werd gevisualiseerd met het R-pakket Pathview op basis van KEGG-annotaties. Rode gekleurde genen vertegenwoordigen verhoogde expressie in RA terwijl groen gekleurde genen verlaagde expressie aantonen. Verschillende ontstekingsgerelateerde genen, waaronder IL6, IL1β, CXCL1, CXCL5, CCL2 en MMP13, vertoonden verhoogde expressie. Daarnaast waren ook immuunregulerende moleculen zoals CD28, CTLA4, TLR2/4 en IFNγ opgereguleerd. Daarentegen lieten enkele genen, waaronder VEGF, APRIL, MCSF, IL17 en TGFβ, een verlaagde expressie zien. De resultaten wijzen op een verhoogde activatie van ontstekings-, immuunrespons- en weefselafbraakprocessen die kenmerkend zijn voor reumatoïde artritis. </em>
 </p>
 
 <br>
@@ -161,7 +161,7 @@ De KEGG-pathway toonde meer pathways aan, waaronder MAPK-signaleringsroute verto
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 7. </b> KEGG beschrijving moet nog!!! </em>
+  <em><b>Figuur 7. KEGG pathway enrichment analysis van differentieel geëxpresseerde genen tussen RA patiënten en gezonde controles. </b> De y-as toont de verrijkte KEGG-signaalroutes, terwijl de x-as het aandeel differentieel geëxpresseerde genen binnen elke pathway, oftewel GeneRatio. De puntengrootte komt overeen met het aantal betrokken genen en de kleur geeft de gecorrigeerde p-waarde weer. De analyse liet een significante verrijking zien van immuun- en ontstekingsgerelateerde pathways, waaronder de MAPK-, TNF-, NF-κB-, IL-17- en NOD-like receptor-signaalroutes. De analyse werd uitgevoerd met behulp van het R-pakket clusterProfiler in combinatie met de KEGG-database. Verrijkte pathways werden geïdentificeerd met behulp van de functie enrichKEGG() en gevisualiseerd als dotplots gegenereerd met clusterProfiler, dat gebaseerd is op ggplot2. </em>
 </p>
 
 <br>
