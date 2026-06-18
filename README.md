@@ -79,8 +79,13 @@ Voor deze analyse werd gebruikgemaakt van een RNA-seq-dataset uit een eerder ond
 
 <br>
 
+## 3.1 RNA-seq verwerking en genkwantificatie
+Sequencing libraries were prepared using the TruSeq Stranded Total RNA RiboZero protocol and sequenced on an Illumina HiSeq 2000 platform using paired-end 100 bp reads (GSM2371053: Rheumatoid Arthritis Tissue 18; Homo Sapiens; RNA-Seq - SRA - NCBI, n.d.-b). De reads werden met behulp van Rsubread gemapt tegen het humane referentiegenoom GRCh38. Vervolgens werd met featureCounts een countmatrix op genniveau opgesteld op basis van een GTF-annotatiebestand. 
+
+## 3.2 Analyses
+De differentiële genexpressie tussen de RA- en controlegroep werd bepaald met DESeq2 in R. De lijst van significant verschillend geëxpresseerde genen werd vervolgens gebruikt voor Gene Ontology (GO)- en KEGG-analyses om te onderzoeken welke biologische processen en signaalroutes mogelijk betrokken zijn bij reumatoïde artritis. Op basis van deze resultaten werden relevante pathways gevisualiseerd.
 <p align="center">
-  <img width="700" height="700" alt="Image" src="-" />
+  <img width="400" height="500" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Assets/StroomschemaTranscriptomics.png" />
   <br>
 </p>
 <p align="left">
@@ -88,12 +93,6 @@ Voor deze analyse werd gebruikgemaakt van een RNA-seq-dataset uit een eerder ond
 </p>
 
 <br>
-
-## 3.1 RNA-seq verwerking en genkwantificatie
-Sequencing libraries were prepared using the TruSeq Stranded Total RNA RiboZero protocol and sequenced on an Illumina HiSeq 2000 platform using paired-end 100 bp reads (GSM2371053: Rheumatoid Arthritis Tissue 18; Homo Sapiens; RNA-Seq - SRA - NCBI, n.d.-b). De reads werden met behulp van Rsubread gemapt tegen het humane referentiegenoom GRCh38. Vervolgens werd met featureCounts een countmatrix op genniveau opgesteld op basis van een GTF-annotatiebestand. 
-
-## 3.2 Analyses
-De differentiële genexpressie tussen de RA- en controlegroep werd bepaald met DESeq2 in R. De lijst van significant verschillend geëxpresseerde genen werd vervolgens gebruikt voor Gene Ontology (GO)- en KEGG-analyses om te onderzoeken welke biologische processen en signaalroutes mogelijk betrokken zijn bij reumatoïde artritis. Op basis van deze resultaten werden relevante pathways gevisualiseerd.
 
 # 4. Resultaten
 Alignment met het menselijke referentiegenome (GRCh38) leverde 9.914 gemapte fragmenten op van de in totaal 10.000 fragmenten (99,1%). De meeste aligned reads waren correct gepaard (93,7%), wat wijst op een goede alignment-kwaliteit. In totaal werden 29.407 genen geanalyseerd. Differentiële expressieanalyse met DESeq2 identificeerde 5.119 significant verschillend geëxpresseerde genen tussen patiënten met reumatoïde artritis en gezonde controles (p < 0,05). Wanneer daarnaast een drempel van Log2 fold change > 1 werd toegepast, bleven 4.572 genen significant. 
