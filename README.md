@@ -23,7 +23,7 @@ In deze studie werd RNA-sequencingdata van synoviumbiopten van patiënten met RA
 Voor deze analyse werd gebruikgemaakt van een RNA-seq-dataset uit een eerder onderzoek naar artritis door Platzer et al. (2019). Uit deze dataset werden vier monsters geselecteerd van patiënten met RA die langer dan 12 maanden aan de ziekte leden, evenals vier monsters van personen zonder RA. 
 <br>
 <table>
-  <caption><b>Tabel 1:</b> Overzicht van synoviumbiopten samples afkomstig uit een eerder uitgevoerd onderzoek (Platzer et al., 2019). </caption>
+  <caption><b>Tabel 1. </b> Overzicht van synoviumbiopten samples afkomstig uit een eerder uitgevoerd onderzoek (Platzer et al., 2019). </caption>
  <thead>
     <tr>
       <th align="left">FASTQ</th>
@@ -89,7 +89,7 @@ De differentiële genexpressie tussen de RA- en controlegroep werd bepaald met D
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 1. </b> Data verwerking en analyse stroomschema. Ruwe RNA-seq data werden gemapt op het referentiegenoom (GRCh38), waarna een countmatrix werd gegenereerd met featureCounts. Differentiële genexpressieanalyse werd uitgevoerd met DESeq2 en gevisualiseerd met een volcanoplot met EnhancedVolcano. De geïdentificeerde differentieel geëxpresseerde genen werden vervolgens gebruikt voor Gene Ontology (GO)- en KEGG-verrijkingsanalyses, gevolgd door pathway-visualisatie en biologische interpretatie van de resultaten. </em>
+  <em><b>Figuur 1. Data verwerking en analyse stroomschema. </b> Ruwe RNA-seq data werden gemapt op het referentiegenoom (GRCh38), waarna een countmatrix werd gegenereerd met featureCounts. Differentiële genexpressieanalyse werd uitgevoerd met DESeq2 en gevisualiseerd met een volcanoplot met EnhancedVolcano. De geïdentificeerde differentieel geëxpresseerde genen werden vervolgens gebruikt voor Gene Ontology (GO)- en KEGG-verrijkingsanalyses, gevolgd door pathway-visualisatie en biologische interpretatie van de resultaten. </em>
 </p>
 
 <br>
@@ -104,7 +104,7 @@ De vulkaanplot visualiseert de geanalyseerde genen en scheidt de statistisch sig
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 2. </b> Volcano beschrijving moet nog!!! </em>
+  <em><b>Figuur 2. Differentiële expressie vulkaanplot tussen synoviumweefsel van RA patiënten en gezonde controles. </b> Op de x-as staat de log₂ fold change van de genexpressie en op de y-as de −log₁₀(p-waarde). Rode punten representeren genen die zowel een significante verandering in expressie als een relevante fold change vertonen. Groene punten voldoen uitsluitend aan de fold-change drempel en grijze punten zijn niet significant. Zowel op- als neergereguleerde genen werden waargenomen, waarbij meerdere genen een sterke verandering in expressie vertoonden. Figuur gevisualiseerd met het R-pakket EnhancedVolcano. </em>
 </p>
 
 <br>
@@ -117,7 +117,7 @@ Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 3. </b> GO beschrijving moet nog!!! </em>
+  <em><b>Figuur 3. Gene Ontology (GO) verrijkingsanalyse van differentieel geëxpresseerde genen tussen RA patiënten en gezonde controles. </b> De y-as toont de verrijkte biologische processen, terwijl de x-as het percentage differentieel geëxpresseerde genen binnen elk GO-term weergeeft (Hits %). De grootte van de punten correspondeert met het aantal genen dat aan een GO-term is gekoppeld en de kleur geeft de significantie van de verrijking weer als −log10(FDR). De meest verrijkte processen waren gerelateerd aan immuunfunctie, waaronder lymfocytdifferentiatie, leukocyt-gemedieerde immuniteit, T-celdifferentiatie en B-cel-gemedieerde immuniteit. De analyse werd uitgevoerd met behulp van het R-pakket clusterProfiler in combinatie met de database voor menselijke genannotatie org.Hs.eg.db. GO-termen werden gevisualiseerd met behulp van dotplots die gegenereerd werden met clusterProfiler, dat gebaseerd is op ggplot2. </em>
 </p>
 
 <br>
@@ -154,7 +154,7 @@ Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel
 
 <br>
 
-## 4.3 KEGG-pathwayanalyse
+## 4.4 KEGG-pathwayanalyse
 De KEGG-pathway toonde meer pathways aan, waaronder MAPK-signaleringsroute vertoonde de hoogste verrijking, gevolgd door NOD-achtige receptorsignalering, TNF-signalering, NF-κB-signalering, IL-17-signalering en Th17-celdifferentiatie. 
  <p align="center">
   <img width="600" height="700" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Resultaten/KEGGresultaten.png" />
