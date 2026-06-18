@@ -95,13 +95,15 @@ De differentiële genexpressie tussen de RA- en controlegroep werd bepaald met D
 <br>
 
 # 4. Resultaten
+
+## 4.1 Alignment- en differentiële genexpressieanalyse
 Alignment met het menselijke referentiegenome (GRCh38) leverde 9.914 gemapte fragmenten op van de in totaal 10.000 fragmenten (99,1%). De meeste aligned reads waren correct gepaard (93,7%), wat wijst op een goede alignment-kwaliteit. In totaal werden 29.407 genen geanalyseerd. Differentiële expressieanalyse met DESeq2 identificeerde 5.119 significant verschillend geëxpresseerde genen tussen patiënten met reumatoïde artritis en gezonde controles (p < 0,05). Wanneer daarnaast een drempel van Log2 fold change > 1 werd toegepast, bleven 4.572 genen significant. 
-
 De vulkaanplot visualiseert de geanalyseerde genen en scheidt de statistisch significante genen door middel van kleur, waarbij een iets grotere groep omlaag gereguleerde genen te zien is dan omhoog gereguleerde genen. De meest significant omlaag gereguleerde genen omvatten onder andere ANKRD30BL, MT-ND6, RAB3IL1, SLC9A3R2 en ZNF598. Daarentegen was het meest omhoog gereguleerde gen in RA-monsters SRGN.
-
+## 4.2 Gene Ontology-verrijkingsanalyse
 Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel- en T-celfunctie, waaronder B-celgemedieerde immuniteit, antigeenreceptor-gemedieerde signaalroute en adaptieve immuunrespons gebaseerd op somatische recombinatie van immuunreceptoren. Op basis van de observaties van de GO-analyse werden pathways gevisualiseerd, plus een pathway die zich uitsluitend richtte op de ziekte zelf (zie Figuren 4, 5 en 6).
-
+## 4.3 KEGG-pathwayanalyse
 De KEGG-pathway toonde meer pathways aan, waaronder MAPK-signaleringsroute vertoonde de hoogste verrijking, gevolgd door NOD-achtige receptorsignalering, TNF-signalering, NF-κB-signalering, IL-17-signalering en Th17-celdifferentiatie. 
+ 
 
 # 5. Conclusie
 
