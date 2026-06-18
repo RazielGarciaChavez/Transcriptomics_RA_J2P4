@@ -99,11 +99,89 @@ De differentiële genexpressie tussen de RA- en controlegroep werd bepaald met D
 ## 4.1 Alignment- en differentiële genexpressieanalyse
 Alignment met het menselijke referentiegenome (GRCh38) leverde 9.914 gemapte fragmenten op van de in totaal 10.000 fragmenten (99,1%). De meeste aligned reads waren correct gepaard (93,7%), wat wijst op een goede alignment-kwaliteit. In totaal werden 29.407 genen geanalyseerd. Differentiële expressieanalyse met DESeq2 identificeerde 5.119 significant verschillend geëxpresseerde genen tussen patiënten met reumatoïde artritis en gezonde controles (p < 0,05). Wanneer daarnaast een drempel van Log2 fold change > 1 werd toegepast, bleven 4.572 genen significant. 
 De vulkaanplot visualiseert de geanalyseerde genen en scheidt de statistisch significante genen door middel van kleur, waarbij een iets grotere groep omlaag gereguleerde genen te zien is dan omhoog gereguleerde genen. De meest significant omlaag gereguleerde genen omvatten onder andere ANKRD30BL, MT-ND6, RAB3IL1, SLC9A3R2 en ZNF598. Daarentegen was het meest omhoog gereguleerde gen in RA-monsters SRGN.
+<p align="center">
+  <img width="400" height="500" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Resultaten/Volcanoplot.png" />
+  <br>
+</p>
+<p align="left">
+  <em><b>Figuur 2. </b> Volcano beschrijving moet nog!!! </em>
+</p>
+
+<br>
+
 ## 4.2 Gene Ontology-verrijkingsanalyse
 Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel- en T-celfunctie, waaronder B-celgemedieerde immuniteit, antigeenreceptor-gemedieerde signaalroute en adaptieve immuunrespons gebaseerd op somatische recombinatie van immuunreceptoren. Op basis van de observaties van de GO-analyse werden pathways gevisualiseerd, plus een pathway die zich uitsluitend richtte op de ziekte zelf (zie Figuren 4, 5 en 6).
+
+<p align="center">
+  <img width="500" height="500" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Resultaten/GOanalysis.png" />
+  <br>
+</p>
+<p align="left">
+  <em><b>Figuur 3. </b> GO beschrijving moet nog!!! </em>
+</p>
+
+<br>
+
+## 4.3 Pathways
+
+<p align="center">
+  <img width="700" height="700" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Resultaten/hsa04660.pathview.png" />
+  <br>
+</p>
+<p align="left">
+  <em><b>Figuur 4. </b> T-cel pathway beschrijving moet nog!!! </em>
+</p>
+
+<br>
+
+<p align="center">
+  <img width="700" height="700" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Resultaten/hsa04662.pathview.png" />
+  <br>
+</p>
+<p align="left">
+  <em><b>Figuur 5. </b> b-cel pathway beschrijving moet nog!!! </em>
+</p>
+
+<br>
+
+<p align="center">
+  <img width="700" height="700" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Resultaten/hsa05323.pathview.png" />
+  <br>
+</p>
+<p align="left">
+  <em><b>Figuur 6. </b> RA pathway beschrijving moet nog!!! </em>
+</p>
+
+<br>
+
 ## 4.3 KEGG-pathwayanalyse
 De KEGG-pathway toonde meer pathways aan, waaronder MAPK-signaleringsroute vertoonde de hoogste verrijking, gevolgd door NOD-achtige receptorsignalering, TNF-signalering, NF-κB-signalering, IL-17-signalering en Th17-celdifferentiatie. 
- 
+ <p align="center">
+  <img width="600" height="700" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Resultaten/KEGGresultaten.png" />
+  <br>
+</p>
+<p align="left">
+  <em><b>Figuur 7. </b> KEGG beschrijving moet nog!!! </em>
+</p>
+
+<br>
 
 # 5. Conclusie
+In deze studie werd RNA-sequencingdata van synoviumbiopten van RA-patiënten en gezonde controles transcriptomisch geanalyseerd in R. De resultaten tonen significante verschillen in genexpressie tussen beide groepen.
 
+DESeq2 differentiële expressieanalyse resultaten wijzen op uitgebreide veranderingen in genexpressie tussen RA patiënten en gezonde controles. De genen die betrokken zijn bij zowel de verhoogde als de verlaagde expressie suggereren dat immuunactivering, ontstekingsprocessen, veranderingen in cellulaire signalering en energiemetabolisme een rol spelen bij reumatoïde artritis.
+
+Terwijl de GO-analyse veel immuungerelateerde biologische processen identificeerde onder de differentieel tot expressie gebrachte genen, toonde de KEGG-analyse ook pathways aan die betrokken zijn bij immuunregulatie, ontsteking, cytokineproductie, activatie van immuuncellen en chronische ontstekingsreacties.
+
+Een beperking van deze studie is dat alle monsters afkomstig waren van vrouwelijke patiënten, wat kan hebben geleid tot seksegerelateerde vertekening. Toekomstig onderzoek kan daarom monsters van beide geslachten gebruiken of zich richten op enkele genen en signaalroutes die verschillen tussen RA-patiënten en gezonde controles.
+
+# 6. Literatuurlijst
+
+Jahid, M., Khan, K. U., Rehan-Ul-Haq, & Ahmed, R. S. (2023). Overview of Rheumatoid Arthritis and Scientific Understanding of the Disease. Mediterranean Journal of Rheumatology, 34(3), 284. https://doi.org/10.31138/MJR.20230801.OO
+
+Platzer Id, A., Nussbaumer Id, T., Karonitsch, T., Smolen, J. S., & Aletaha, D. (2019). Analysis of gene expression in rheumatoid arthritis and related conditions offers insights into sex-bias, gene biotypes and co-expression patterns. https://doi.org/10.1371/journal.pone.0219698
+
+GSM2371053: rheumatoid arthritis tissue 18; Homo sapiens; RNA-Seq - SRA - NCBI. (n.d.-b). https://www.ncbi.nlm.nih.gov/sra?term=SRX2316126&utm
+
+# AI- Disclaimer
+Bij de uitvoering van dit project is gebruikgemaakt van een AI-assistent voor ondersteuning bij programmeervragen, data-analyse en taalcorrectie. Alle resultaten, interpretaties en conclusies zijn door de student zelfstandig gecontroleerd en vastgesteld.
