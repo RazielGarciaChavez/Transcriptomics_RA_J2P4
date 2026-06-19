@@ -1,15 +1,16 @@
 # Transcriptoomanalyse van synoviumweefsel onthult verhoogde immuunactivatie en ontstekingssignalering bij reumatoïde artritis
 Een transcriptomics analyse gedaan mbv R om te kijken welke genen meer of minder tot expressie komen bij personen met RA in vergelijking met een gezonde controlegroep. Daarnaast werd het gekeken welke pathways betrokken zijn bij de ziekte mbv een Gene Ontology analyse (GO).
-## 1. Inhoud/Structuur
 
-- `Data/Raw` – ruwe datasets voor de analyse van de casus
-- `Data/Verwerkt` - verwerkte dataset gegenereerd met scripts
-- `Script` – gebruikte R scripts voor analyse uitvoering en figuren maken
-- `Resultaten` - grafieken en tabellen
-- `Bronnen` - gebruikte bronnen 
+# 1. Inhoud/Structuur
+
+- `Data/Raw` – ruwe datasets voor de analyse 
+- `Data/Verwerkt` - verwerkte dataset gegenereerd met script
+- `Script` – gebruikte R script voor analyse uitvoering en visualisatie
+- `Resultaten` - grafieken en plots
+- `Bronnen` - extra links en hulpmiddelen
 - `README.md` - resultaten analyse
-- `assets` - overige documenten 
-- `data_stewardship` - Voor de competentie beheren ga je aantonen dat je projectgegevens kunt beheren met behulp van GitHub. In deze folder kan je hulpvragen terugvinden om je op gang te helpen met de uitleg van data stewardship. 
+- `assets` - overige figuren
+- `data_stewardship` - Data beheren 'disclaimer' (competentie onderdeel)
 
 # 2. Introductie
 Reumatoïde artritis (RA) is een chronische inflammatoire auto-immuunziekte die wordt gekenmerkt door aanhoudende ontsteking van het gewrichtsslijmvlies, erosie van botten en kraakbeen, wat leidt tot gewrichtsdestructie. Het is een multifactoriële ziekte waarbij genetische en omgevingsfactoren een belangrijke rol spelen in zowel de gevoeligheid als het ontstaan van deze aandoening. De verschillen in ziekteverloop bij RA-patiënten zijn ook te wijten aan genetische en moleculaire kenmerken, zoals de patronen van ontstekingsmoleculen die aanwezig zijn in het ontstoken weefsel van de aangetaste gewrichten (Jahid et al., 2023).
@@ -98,7 +99,7 @@ De differentiële genexpressie tussen de RA- en controlegroep werd bepaald met D
 
 ## 4.1 Alignment- en differentiële genexpressieanalyse
 Alignment met het menselijke referentiegenome (GRCh38) leverde 9.914 gemapte fragmenten op van de in totaal 10.000 fragmenten (99,1%). De meeste aligned reads waren correct gepaard (93,7%), wat wijst op een goede alignment-kwaliteit. In totaal werden 29.407 genen geanalyseerd. Differentiële expressieanalyse met DESeq2 identificeerde 5.119 significant verschillend geëxpresseerde genen tussen patiënten met reumatoïde artritis en gezonde controles (p < 0,05). Wanneer daarnaast een drempel van Log2 fold change > 1 werd toegepast, bleven 4.572 genen significant. 
-De vulkaanplot visualiseert de geanalyseerde genen en scheidt de statistisch significante genen door middel van kleur, waarbij een iets grotere groep omlaag gereguleerde genen te zien is dan omhoog gereguleerde genen. De meest significant omlaag gereguleerde genen omvatten onder andere ANKRD30BL, MT-ND6, RAB3IL1, SLC9A3R2 en ZNF598. Daarentegen was het meest omhoog gereguleerde gen in RA-monsters SRGN.
+De vulkaanplot visualiseert de geanalyseerde genen en scheidt de statistisch significante genen door middel van kleur, waarbij een iets grotere groep omlaag gereguleerde genen te zien is dan omhoog gereguleerde genen. De meest significant omlaag gereguleerde genen omvatten onder andere ANKRD30BL, MT-ND6, RAB3IL1, SLC9A3R2 en ZNF598. Daarentegen was het meest omhoog gereguleerde gen in RA-monsters SRGN; deze resultaten komen overeen met het artikel van La Rosa et al. (2025).
 <p align="center">
   <img width="400" height="500" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Resultaten/Volcanoplot.png" />
   <br>
@@ -129,7 +130,7 @@ Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 4. Visualisatie van de T-cell receptor signaling pathway  op basis van differentiële genexpressie tussen RA patiënten en gezonde controles. </b> De pathway (hsa04660) werd gevisualiseerd met het R-pakket Pathview op basis van GO-analyse resultaten. Rood gekleurde genen zijn opgereguleerd in RA, terwijl groen gekleurde genen neerwaarts gereguleerd zijn. Binnen deze pathway werden meerdere genen betrokken bij T-celactivatie en immuunsignalering differentieel geëxpresseerd, waaronder CD3D, CD3E, CD45, ZAP70, GADS, ITK en PI3K. Daarnaast werden veranderingen waargenomen in componenten van de MAPK- en NF-κB-signaalroutes. Deze resultaten wijzen op een veranderde T-celgemedieerde immuunrespons. </em>
+  <em><b>Figuur 4. Visualisatie van de T-cell receptor signaling pathway  op basis van differentiële genexpressie tussen RA patiënten en gezonde controles. </b> De pathway (hsa04660) werd gevisualiseerd met het R-pakket Pathview op basis van GO-analyse resultaten. Rood gekleurde genen zijn opgereguleerd in RA, terwijl groen gekleurde genen neerwaarts gereguleerd zijn. Binnen deze pathway werden meerdere genen betrokken bij T-celactivatie en immuunsignalering differentieel geëxpresseerd, waaronder CD3D, CD3E, CD45, ZAP70, GADS, ITK en PI3K. Daarnaast werden veranderingen waargenomen in componenten van de MAPK- en NF-κB-signaalroutes. Deze resultaten wijzen op een veranderde T-celgemedieerde immuunrespons, wat overeenkomt met eerdere onderzoeken (Cope, 2008). </em>
 </p>
 
 <br>
@@ -149,7 +150,7 @@ Bij de GO-analyse waren verschillende verrijkte GO-termen geassocieerd met B-cel
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 6. Visualisatie van de bij Rheumatoid Arthritis betrokken pathways. </b> De pathway (hsa05323) werd gevisualiseerd met het R-pakket Pathview op basis van KEGG-annotaties. Rode gekleurde genen vertegenwoordigen verhoogde expressie in RA terwijl groen gekleurde genen verlaagde expressie aantonen. Verschillende ontstekingsgerelateerde genen, waaronder IL6, IL1β, CXCL1, CXCL5, CCL2 en MMP13, vertoonden verhoogde expressie. Daarnaast waren ook immuunregulerende moleculen zoals CD28, CTLA4, TLR2/4 en IFNγ opgereguleerd. Daarentegen lieten enkele genen, waaronder VEGF, APRIL, MCSF, IL17 en TGFβ, een verlaagde expressie zien. De resultaten wijzen op een verhoogde activatie van ontstekings-, immuunrespons- en weefselafbraakprocessen die kenmerkend zijn voor reumatoïde artritis. </em>
+  <em><b>Figuur 6. Visualisatie van de bij Rheumatoid Arthritis betrokken pathways. </b> De pathway (hsa05323) werd gevisualiseerd met het R-pakket Pathview op basis van KEGG-annotaties. Rode gekleurde genen vertegenwoordigen verhoogde expressie in RA terwijl groen gekleurde genen verlaagde expressie aantonen. Verschillende ontstekingsgerelateerde genen, waaronder IL6, IL1β, CXCL1, CXCL5, CCL2 en MMP13, vertoonden verhoogde expressie. Daarnaast waren ook immuunregulerende moleculen zoals CD28, CTLA4, TLR2/4 en IFNγ opgereguleerd. Daarentegen lieten enkele genen, waaronder VEGF, APRIL, MCSF, IL17 en TGFβ, een verlaagde expressie zien. De resultaten wijzen op een verhoogde activatie van ontstekings-, immuunrespons- en weefselafbraakprocessen die kenmerkend zijn voor reumatoïde artritis (McInnes & Schett, 2011). </em>
 </p>
 
 <br>
@@ -161,7 +162,7 @@ De KEGG-pathway toonde meer pathways aan, waaronder MAPK-signaleringsroute verto
   <br>
 </p>
 <p align="left">
-  <em><b>Figuur 7. KEGG pathway enrichment analysis van differentieel geëxpresseerde genen tussen RA patiënten en gezonde controles. </b> De y-as toont de verrijkte KEGG-signaalroutes, terwijl de x-as het aandeel differentieel geëxpresseerde genen binnen elke pathway, oftewel GeneRatio. De puntengrootte komt overeen met het aantal betrokken genen en de kleur geeft de gecorrigeerde p-waarde weer. De analyse liet een significante verrijking zien van immuun- en ontstekingsgerelateerde pathways, waaronder de MAPK-, TNF-, NF-κB-, IL-17- en NOD-like receptor-signaalroutes. De analyse werd uitgevoerd met behulp van het R-pakket clusterProfiler in combinatie met de KEGG-database. Verrijkte pathways werden geïdentificeerd met behulp van de functie enrichKEGG() en gevisualiseerd als dotplots gegenereerd met clusterProfiler, dat gebaseerd is op ggplot2. </em>
+  <em><b>Figuur 7. KEGG pathway enrichment analysis van differentieel geëxpresseerde genen tussen RA patiënten en gezonde controles. </b> De y-as toont de verrijkte KEGG-signaalroutes, terwijl de x-as het aandeel differentieel geëxpresseerde genen binnen elke pathway, oftewel GeneRatio. De puntengrootte komt overeen met het aantal betrokken genen en de kleur geeft de gecorrigeerde p-waarde weer. De analyse liet een significante verrijking zien van immuun- en ontstekingsgerelateerde pathways, waaronder de MAPK-, TNF-, NF-κB-, IL-17- en NOD-like receptor-signaalroutes. De analyse werd uitgevoerd met behulp van het R-pakket clusterProfiler in combinatie met de KEGG-database. Verrijkte pathways werden gevisualiseerd als dotplots gegenereerd met clusterProfiler, dat gebaseerd is op ggplot2. </em>
 </p>
 
 <br>
@@ -182,6 +183,12 @@ Jahid, M., Khan, K. U., Rehan-Ul-Haq, & Ahmed, R. S. (2023). Overview of Rheumat
 Platzer Id, A., Nussbaumer Id, T., Karonitsch, T., Smolen, J. S., & Aletaha, D. (2019). Analysis of gene expression in rheumatoid arthritis and related conditions offers insights into sex-bias, gene biotypes and co-expression patterns. https://doi.org/10.1371/journal.pone.0219698
 
 GSM2371053: rheumatoid arthritis tissue 18; Homo sapiens; RNA-Seq - SRA - NCBI. (n.d.-b). https://www.ncbi.nlm.nih.gov/sra?term=SRX2316126&utm
+
+La Rosa, F. G., Moreland, L. W., Nibali, L., Curtis, M., Deane, K. D., Strickland, C., Seifert, J., Keeter, C., Simberg, D., Scheinman, R. I., Lau, R., Pitzalis, C., Lewis, M. J., Holers, V. M., Banda, N. K., & Network, O. B. O. T. a. M. P. R. (2025). Pathotype-Specific expression of Granzyme-Perforin pathway genes and their association with clinical disease activity in early rheumatoid arthritis and in a randomized clinical trial. Immune Network, 25(4), e25. https://doi.org/10.4110/in.2025.25.e25
+
+Cope, A. P. (2008). T cells in rheumatoid arthritis. Arthritis Research & Therapy, 10(Suppl 1), S1. https://doi.org/10.1186/ar2412
+
+McInnes, I. B., & Schett, G. (2011). The pathogenesis of rheumatoid arthritis. New England Journal of Medicine, 365(23), 2205–2219. https://doi.org/10.1056/NEJMra1004965
 
 # AI- Disclaimer
 Bij de uitvoering van dit project is gebruikgemaakt van een AI-assistent voor ondersteuning bij programmeervragen, data-analyse en taalcorrectie. Alle resultaten, interpretaties en conclusies zijn door de student zelfstandig gecontroleerd en vastgesteld.
