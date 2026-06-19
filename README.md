@@ -1,16 +1,23 @@
 # Transcriptoomanalyse van synoviumweefsel onthult verhoogde immuunactivatie en ontstekingssignalering bij reumatoïde artritis
 Een transcriptomics analyse gedaan mbv R om te kijken welke genen meer of minder tot expressie komen bij personen met RA in vergelijking met een gezonde controlegroep. Daarnaast werd het gekeken welke pathways betrokken zijn bij de ziekte mbv een Gene Ontology analyse (GO).
 
+<p align="center">
+  <img src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Assets/Rheumatoid-Arthritis-Diagram.webp" width="1000"/>
+</p>
+<p align="right">
+(Regencare, 2025)
+</p>
+
 # 1. Inhoud/Structuur
 
+- `Assets` - overige figuren
+- `Bronnen` - extra links en hulpmiddelen
 - `Data/Raw` – ruwe datasets voor de analyse 
 - `Data/Verwerkt` - verwerkte dataset gegenereerd met script
-- `Script` – gebruikte R script voor analyse uitvoering en visualisatie
+- `data_stewardship` - Data beheren 'disclaimer' (competentie)
 - `Resultaten` - grafieken en plots
-- `Bronnen` - extra links en hulpmiddelen
+- `Script` – gebruikte R script voor analyse uitvoering en visualisatie
 - `README.md` - resultaten analyse
-- `assets` - overige figuren
-- `data_stewardship` - Data beheren 'disclaimer' (competentie onderdeel)
 
 # 2. Introductie
 Reumatoïde artritis (RA) is een chronische inflammatoire auto-immuunziekte die wordt gekenmerkt door aanhoudende ontsteking van het gewrichtsslijmvlies, erosie van botten en kraakbeen, wat leidt tot gewrichtsdestructie. Het is een multifactoriële ziekte waarbij genetische en omgevingsfactoren een belangrijke rol spelen in zowel de gevoeligheid als het ontstaan van deze aandoening. De verschillen in ziekteverloop bij RA-patiënten zijn ook te wijten aan genetische en moleculaire kenmerken, zoals de patronen van ontstekingsmoleculen die aanwezig zijn in het ontstoken weefsel van de aangetaste gewrichten (Jahid et al., 2023).
@@ -177,6 +184,8 @@ Terwijl de GO-analyse veel immuungerelateerde biologische processen identificeer
 Een beperking van deze studie is dat alle monsters afkomstig waren van vrouwelijke patiënten, wat kan hebben geleid tot seksegerelateerde vertekening. Toekomstig onderzoek kan daarom monsters van beide geslachten gebruiken of zich richten op enkele genen en signaalroutes die verschillen tussen RA-patiënten en gezonde controles.
 
 # 6. Literatuurlijst
+
+Regencare. (2025, May 19). Living Beyond RA: Understanding rheumatoid arthritis and Regencare’s commitment to your care - Regencare. https://regencare.in/ortho/rheumatoid-arthritis-treatment/
 
 Jahid, M., Khan, K. U., Rehan-Ul-Haq, & Ahmed, R. S. (2023). Overview of Rheumatoid Arthritis and Scientific Understanding of the Disease. Mediterranean Journal of Rheumatology, 34(3), 284. https://doi.org/10.31138/MJR.20230801.OO
 
