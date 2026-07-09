@@ -88,10 +88,15 @@ Voor deze analyse werd gebruikgemaakt van een RNA-seq-dataset uit een eerder ond
 <br>
 
 ## 3.1 RNA-seq verwerking en genkwantificatie
-Sequencing libraries were prepared using the TruSeq Stranded Total RNA RiboZero protocol and sequenced on an Illumina HiSeq 2000 platform using paired-end 100 bp reads (GSM2371053: Rheumatoid Arthritis Tissue 18; Homo Sapiens; RNA-Seq - SRA - NCBI, n.d.-b). De reads werden met behulp van Rsubread gemapt tegen het humane referentiegenoom GRCh38. Vervolgens werd met featureCounts een countmatrix op genniveau opgesteld op basis van een GTF-annotatiebestand. 
+Sequencing libraries werden voorbereid met behulp van het TruSeq Stranded Total RNA RiboZero-protocol en gesequenced op een Illumina HiSeq 2000-platform met behulp van gepaarde 100 bp-reads (GSM2371053: Rheumatoid Arthritis Tissue 18; Homo Sapiens; RNA-Seq - SRA - NCBI, n.d.-b). De reads werden met behulp van Rsubread gemapt tegen het humane referentiegenoom GRCh38. Vervolgens werd met featureCounts een countmatrix op genniveau opgesteld op basis van een GTF-annotatiebestand. 
 
 ## 3.2 Analyses
-De differentiële genexpressie tussen de RA- en controlegroep werd bepaald met DESeq2 in R. De lijst van significant verschillend geëxpresseerde genen werd vervolgens gebruikt voor Gene Ontology (GO)- en KEGG-analyses om te onderzoeken welke biologische processen en signaalroutes mogelijk betrokken zijn bij reumatoïde artritis. Op basis van deze resultaten werden relevante pathways gevisualiseerd.
+De differentiële genexpressie tussen de RA- en controlegroep werd bepaald met het R-pakket DESeq2 (v1.50.2) (Love et al., 2014). Genen werden als differentieel geëxpresseerd beschouwd wanneer zij voldeden aan een gecorrigeerde p-waarde (padj) < 0,05 en een absolute log₂ fold change > 1.
+
+De lijst met significant differentieel geëxpresseerde genen werd vervolgens gebruikt voor een Gene Ontology (GO)-verrijkingsanalyse met het R-pakket clusterProfiler (v4.18.4) (Yu et al., 2012). Vooraf werden de gensymbolen omgezet naar Entrez-ID's met org.Hs.eg.db (v3.22.0). Alleen de genen die voldeden aan de bovengenoemde selectiecriteria (padj < 0,05 en |log₂FC| > 1) werden meegenomen in de GO-analyse.
+
+Daarnaast werd een KEGG pathway enrichment analyse uitgevoerd met clusterProfiler (v4.18.4) (Yu et al., 2012), eveneens op basis van de significante genen. De drie meest relevante pathways voor RA werden vervolgens gevisualiseerd met het R-pakket pathview (v1.50.0) (Luo & Brouwer, 2013). De volcano plot werd gemaakt met EnhancedVolcano (v1.28.2), terwijl de GO- en KEGG-dotplots werden gegenereerd met ggplot2 (v4.0.3) en enrichplot (v1.30.5).
+
 <p align="center">
   <img width="400" height="500" alt="Image" src="https://github.com/RazielGarciaChavez/Transcriptomics_RA_J2P4/blob/main/Assets/StroomschemaTranscriptomics.png" />
   <br>
@@ -185,19 +190,25 @@ Een beperking van deze studie is dat alle monsters afkomstig waren van vrouwelij
 
 # 6. Literatuurlijst
 
-Regencare. (2025, May 19). Living Beyond RA: Understanding rheumatoid arthritis and Regencare’s commitment to your care - Regencare. https://regencare.in/ortho/rheumatoid-arthritis-treatment/
-
-Jahid, M., Khan, K. U., Rehan-Ul-Haq, & Ahmed, R. S. (2023). Overview of Rheumatoid Arthritis and Scientific Understanding of the Disease. Mediterranean Journal of Rheumatology, 34(3), 284. https://doi.org/10.31138/MJR.20230801.OO
-
-Platzer Id, A., Nussbaumer Id, T., Karonitsch, T., Smolen, J. S., & Aletaha, D. (2019). Analysis of gene expression in rheumatoid arthritis and related conditions offers insights into sex-bias, gene biotypes and co-expression patterns. https://doi.org/10.1371/journal.pone.0219698
+Cope, A. P. (2008). T cells in rheumatoid arthritis. Arthritis Research & Therapy, 10(Suppl 1), S1. https://doi.org/10.1186/ar2412
 
 GSM2371053: rheumatoid arthritis tissue 18; Homo sapiens; RNA-Seq - SRA - NCBI. (n.d.-b). https://www.ncbi.nlm.nih.gov/sra?term=SRX2316126&utm
 
+Jahid, M., Khan, K. U., Rehan-Ul-Haq, & Ahmed, R. S. (2023). Overview of Rheumatoid Arthritis and Scientific Understanding of the Disease. Mediterranean Journal of Rheumatology, 34(3), 284. https://doi.org/10.31138/MJR.20230801.OO
+
 La Rosa, F. G., Moreland, L. W., Nibali, L., Curtis, M., Deane, K. D., Strickland, C., Seifert, J., Keeter, C., Simberg, D., Scheinman, R. I., Lau, R., Pitzalis, C., Lewis, M. J., Holers, V. M., Banda, N. K., & Network, O. B. O. T. a. M. P. R. (2025). Pathotype-Specific expression of Granzyme-Perforin pathway genes and their association with clinical disease activity in early rheumatoid arthritis and in a randomized clinical trial. Immune Network, 25(4), e25. https://doi.org/10.4110/in.2025.25.e25
 
-Cope, A. P. (2008). T cells in rheumatoid arthritis. Arthritis Research & Therapy, 10(Suppl 1), S1. https://doi.org/10.1186/ar2412
+Love, M. I., Huber, W., & Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biology, 15(12), 550. https://doi.org/10.1186/s13059-014-0550-8
+
+Luo, W., & Brouwer, C. (2013). Pathview: An R/Bioconductor package for pathway-based data integration and visualization. Bioinformatics, 29(14), 1830–1831. https://doi.org/10.1093/bioinformatics/btt285
 
 McInnes, I. B., & Schett, G. (2011). The pathogenesis of rheumatoid arthritis. New England Journal of Medicine, 365(23), 2205–2219. https://doi.org/10.1056/NEJMra1004965
+
+Platzer Id, A., Nussbaumer Id, T., Karonitsch, T., Smolen, J. S., & Aletaha, D. (2019). Analysis of gene expression in rheumatoid arthritis and related conditions offers insights into sex-bias, gene biotypes and co-expression patterns. https://doi.org/10.1371/journal.pone.0219698
+
+Regencare. (2025, May 19). Living Beyond RA: Understanding rheumatoid arthritis and Regencare’s commitment to your care - Regencare. https://regencare.in/ortho/rheumatoid-arthritis-treatment/
+
+Yu, G., Wang, L. G., Han, Y., & He, Q. Y. (2012). clusterProfiler: An R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology, 16(5), 284–287. https://doi.org/10.1089/omi.2011.0118
 
 # AI- Disclaimer
 Bij de uitvoering van dit project is gebruikgemaakt van een AI-assistent voor ondersteuning bij programmeervragen, data-analyse en taalcorrectie. Alle resultaten, interpretaties en conclusies zijn door de student zelfstandig gecontroleerd en vastgesteld.
